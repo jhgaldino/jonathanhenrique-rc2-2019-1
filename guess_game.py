@@ -5,11 +5,22 @@ print("*************************\n")
 
 secret_game = 42
 
-guess = input("digite numero")
-print("digitou",guess)
+guess_str = input("digite numero")
+guess = input(guess_str)
 
-if secret_game == int(guess):
-    print("Acerto Miseravi!")
 
-else:
-    print("Erro")
+correct = guess == secret_game
+bigger = guess > secret_game
+smaller = guess < secret_game
+
+
+if correct:
+    print("Certa Resposta")
+
+else :
+    if bigger:
+        print("Erro, o seu numero é maior")
+    elif smaller:
+        print("Erro, o seu numero é menor")
+
+print("*********FIM DE JOGO***********")
