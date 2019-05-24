@@ -7,7 +7,8 @@ print("Bem vindo ao jogo de advinhação")
 print("*************************\n")
 
 secret_game = int(random.randrange(1,100))
-tries = 0
+points = 1000
+
 
 flag_level = True
 while flag_level:
@@ -48,8 +49,9 @@ for run in range(tries):
         elif smaller:
             print("Erro, o seu numero é menor")
 
-    run += 1
-    tries -= 1
+        points -= abs(secret_game - guess)
+
+print(f"pontuação: {points}")
 
 
 print("*********FIM DE JOGO***********")
