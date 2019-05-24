@@ -7,7 +7,24 @@ print("Bem vindo ao jogo de advinhação")
 print("*************************\n")
 
 secret_game = int(random.randrange(1,100))
-tries = 3
+tries = 0
+
+flag_level = True
+while flag_level:
+    print("Defina o nivel")
+    level = int(input("(1)facil (2)medio (3)dificil\n"))
+
+    if level == 1:
+        tries = 20
+        break
+    elif level == 2:
+        tries = 10
+        break
+    elif level == 3:
+        tries = 5
+    else:
+        continue
+
 
 for run in range(tries):
     print("\nTentativa{} de {}".format(run+1,tries))
