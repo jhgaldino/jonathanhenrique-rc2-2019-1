@@ -1,10 +1,14 @@
+from typing import Any, Union
+import random
+from random import randrange
+
 print("\n**************************")
 print("Bem vindo ao jogo de advinhação")
 print("*************************\n")
 
+secret_game = int(random.randrange(1,100))
 tries = 3
-run = 1
-secret_game = 42
+
 for run in range(tries):
     print("\nTentativa{} de {}".format(run+1,tries))
     guess_str = input("Qual seu chute?(Entre 1 e 100)Digite numero :")
