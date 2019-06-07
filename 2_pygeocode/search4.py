@@ -25,4 +25,4 @@ def geocode(address):
     print(raw_reply.decode('utf-8'))
 
 if __name__ == '__main__':
-    geocode('Belarmino Vilela Junqueira, Ituiutaba, MG ')
+    geocode('Geraldina da Silva Rocha Pereira, Jundiaí, SP ')

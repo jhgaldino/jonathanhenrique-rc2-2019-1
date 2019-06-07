@@ -15,4 +15,4 @@ def geocode(address):
     print(reply[0]['lat'], reply[0]['lon'])
 
 if __name__ == '__main__':
-        geocode('Belarmino Vilela Junqueira, Ituiutaba, MG')
+        geocode('Geraldina da Silva Rocha Pereira, Jundiaí, SP')
