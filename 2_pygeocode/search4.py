@@ -15,10 +15,12 @@ def geocode(address):
     unencrypted_sock.connect(('nominatim.openstreetmap.org', 443))
     sock = ssl.wrap_socket(unencrypted_sock)
     request = request_text.format(quote_plus(address))
+    print(request)
     sock.sendall(request.encode('ascii'))
     raw_reply = b''
     while True:
         more = sock.recv(4096)
+        print(more)
         if not more:
             break
         raw_reply += more
