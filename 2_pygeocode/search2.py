@@ -9,8 +9,9 @@ def geocode(address):
     headers = {'User-Agent': user_agent}
     response = requests.get(base, params=parameters, headers=headers)
     reply = response.json()
+    print('\t\tLatitude e Longetude','(',reply[0]['lat'],',', reply[0]['lon'],')')
 
-    print(reply[0]['lat'], reply[0]['lon'])
+    print('\t\tLatitude e Longetude','(',reply[1]['lat'],',', reply[1]['lon'],')')
 
 
 if __name__ == '__main__':
