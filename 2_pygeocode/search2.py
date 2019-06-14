@@ -9,7 +9,7 @@ def geocode(address):
     headers = {'User-Agent': user_agent}
     response = requests.get(base, params=parameters, headers=headers)
     reply = response.json()
-    print(reply)
+
     print(reply[0]['lat'], reply[0]['lon'])
 
 

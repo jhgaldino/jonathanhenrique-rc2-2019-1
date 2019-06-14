@@ -51,6 +51,7 @@ def play():
             points -= abs(secret_game - guess)
 
     print(f"pontuação: {points}")
+    print("o numero era",secret_game)
     print("*********FIM DE JOGO***********")
 
 
