@@ -9,9 +9,9 @@ def server(interface, port):
     print('listening for datagrams at {}'.format(sock.getsockname()))
     while True:
         data, address = sock.recvfrom(BUFFSIZE)
-        text = data.decode('ascii')
+        text = data.decode('utf-8')
         text = text.upper()
-        sock.sendto(text.encode('ascii'),address)
+        sock.sendto(text.encode('utf-8'),address)
         print('O cliente {} falou : {!r}'.format(address,text))
 
 

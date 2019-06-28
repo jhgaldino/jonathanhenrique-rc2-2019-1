@@ -7,12 +7,12 @@ def client(network, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     text = input("Envie uma mensagem :")
-    sock.sendto(text.encode('ascii'),(network,port))
+    sock.sendto(text.encode('utf-8'),(network,port))
     while True:
         data, address = sock.recvfrom(BUFFSIZE)
         if not data:
             break;
-        print(data.decode('ascii'))
+        print(data.decode('utf-8'))
 
 
 if __name__ == '__main__':
