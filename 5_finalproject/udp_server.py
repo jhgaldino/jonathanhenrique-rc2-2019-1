@@ -25,3 +25,7 @@ def server(interface, port):
         print('  Incoming sixteen-octet message:', repr(message))
 
 
+
+if __name__ == '__main__':
+    server("127.0.0.1", 1060)
+
