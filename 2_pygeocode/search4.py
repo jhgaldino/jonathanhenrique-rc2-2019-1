@@ -27,4 +27,4 @@ def geocode(address):
     print(raw_reply.decode('utf-8'))
 
 if __name__ == '__main__':
-    geocode('Geraldina da Silva Rocha Pereira, Jundiaí, SP ')
+    geocode('Professora Geraldina da Silva Rocha Pereira, Jundiaí, SP ')
